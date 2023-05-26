@@ -5,8 +5,6 @@ using Polly;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddScoped<ISearchService, SearchService>();
-
 builder.Services.AddHttpClient("OrdersService", conf =>
 {
     conf.BaseAddress = new Uri(builder.Configuration["Services:Orders"]!);
@@ -26,6 +24,8 @@ builder.Services.AddHttpClient("CustomersService", conf =>
 
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IProductsService, ProductsService>();
+builder.Services.AddScoped<ISearchService, SearchService>();
+builder.Services.AddScoped<ICustomersService, CustomersService>();
 builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

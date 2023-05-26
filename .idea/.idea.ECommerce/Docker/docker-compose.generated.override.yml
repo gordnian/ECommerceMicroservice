@@ -1,0 +1,118 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  ecommerce.api.customers:
+    build:
+      context: "/Users/keyvan/SourceCode/LinkedinLearning/ECommerce"
+      dockerfile: "ECommerce.Api.Customers/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "/riderDebugger/linux-arm64/dotnet/dotnet"
+    - "/riderDebugger/JetBrains.Debugger.Worker.exe"
+    - "--mode=server"
+    - "--frontend-port=57100"
+    - "--backend-port=57300"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "https://+:443;http://+:80"
+      RIDER_DEBUGGER_LOG_DIR: "/riderLogs"
+      RESHARPER_LOG_CONF: "/riderLogsConf/backend-log.xml"
+    image: "ecommerce.api.customers:dev"
+    ports:
+    - "57004:57100"
+    - "57204:57300"
+    volumes:
+    - "/Users/keyvan/.aspnet/https:/root/.aspnet/https"
+    - "/Users/keyvan/.microsoft/usersecrets:/root/.microsoft/usersecrets"
+    - "/Users/keyvan/SourceCode/LinkedinLearning/ECommerce/ECommerce.Api.Customers:/app:rw"
+    - "/Users/keyvan/.local/share/JetBrains/RiderRemoteDebugger/2023.1.2/LinuxArm64:/riderDebugger"
+    - "/Applications/Rider.app/Contents/bin:/riderLogsConf"
+    - "/Users/keyvan/Library/Logs/JetBrains/Rider2023.1/DebuggerWorker/JetBrains.Debugger.Worker.2023_5_26_14_16_28:/riderLogs:rw"
+    working_dir: "/app"
+  ecommerce.api.orders:
+    build:
+      context: "/Users/keyvan/SourceCode/LinkedinLearning/ECommerce"
+      dockerfile: "ECommerce.Api.Orders/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "/riderDebugger/linux-arm64/dotnet/dotnet"
+    - "/riderDebugger/JetBrains.Debugger.Worker.exe"
+    - "--mode=server"
+    - "--frontend-port=57100"
+    - "--backend-port=57300"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "https://+:443;http://+:80"
+      RIDER_DEBUGGER_LOG_DIR: "/riderLogs"
+      RESHARPER_LOG_CONF: "/riderLogsConf/backend-log.xml"
+    image: "ecommerce.api.orders:dev"
+    ports:
+    - "57005:57100"
+    - "57205:57300"
+    volumes:
+    - "/Users/keyvan/.aspnet/https:/root/.aspnet/https"
+    - "/Users/keyvan/.microsoft/usersecrets:/root/.microsoft/usersecrets"
+    - "/Users/keyvan/SourceCode/LinkedinLearning/ECommerce/ECommerce.Api.Orders:/app:rw"
+    - "/Users/keyvan/.local/share/JetBrains/RiderRemoteDebugger/2023.1.2/LinuxArm64:/riderDebugger"
+    - "/Applications/Rider.app/Contents/bin:/riderLogsConf"
+    - "/Users/keyvan/Library/Logs/JetBrains/Rider2023.1/DebuggerWorker/JetBrains.Debugger.Worker.2023_5_26_14_16_28:/riderLogs:rw"
+    working_dir: "/app"
+  ecommerce.api.products:
+    build:
+      context: "/Users/keyvan/SourceCode/LinkedinLearning/ECommerce"
+      dockerfile: "ECommerce.Api.Products/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "/riderDebugger/linux-arm64/dotnet/dotnet"
+    - "/riderDebugger/JetBrains.Debugger.Worker.exe"
+    - "--mode=server"
+    - "--frontend-port=57100"
+    - "--backend-port=57300"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "https://+:443;http://+:80"
+      RIDER_DEBUGGER_LOG_DIR: "/riderLogs"
+      RESHARPER_LOG_CONF: "/riderLogsConf/backend-log.xml"
+    image: "ecommerce.api.products:dev"
+    ports:
+    - "57006:57100"
+    - "57206:57300"
+    volumes:
+    - "/Users/keyvan/.aspnet/https:/root/.aspnet/https"
+    - "/Users/keyvan/.microsoft/usersecrets:/root/.microsoft/usersecrets"
+    - "/Users/keyvan/SourceCode/LinkedinLearning/ECommerce/ECommerce.Api.Products:/app:rw"
+    - "/Users/keyvan/.local/share/JetBrains/RiderRemoteDebugger/2023.1.2/LinuxArm64:/riderDebugger"
+    - "/Applications/Rider.app/Contents/bin:/riderLogsConf"
+    - "/Users/keyvan/Library/Logs/JetBrains/Rider2023.1/DebuggerWorker/JetBrains.Debugger.Worker.2023_5_26_14_16_28:/riderLogs:rw"
+    working_dir: "/app"
+  ecommerce.api.search:
+    build:
+      context: "/Users/keyvan/SourceCode/LinkedinLearning/ECommerce"
+      dockerfile: "ECommerce.Api.Search/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "/riderDebugger/linux-arm64/dotnet/dotnet"
+    - "/riderDebugger/JetBrains.Debugger.Worker.exe"
+    - "--mode=server"
+    - "--frontend-port=57100"
+    - "--backend-port=57300"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "https://+:443;http://+:80"
+      RIDER_DEBUGGER_LOG_DIR: "/riderLogs"
+      RESHARPER_LOG_CONF: "/riderLogsConf/backend-log.xml"
+    image: "ecommerce.api.search:dev"
+    ports:
+    - "57007:57100"
+    - "57207:57300"
+    volumes:
+    - "/Users/keyvan/.aspnet/https:/root/.aspnet/https"
+    - "/Users/keyvan/.microsoft/usersecrets:/root/.microsoft/usersecrets"
+    - "/Users/keyvan/SourceCode/LinkedinLearning/ECommerce/ECommerce.Api.Search:/app:rw"
+    - "/Users/keyvan/.local/share/JetBrains/RiderRemoteDebugger/2023.1.2/LinuxArm64:/riderDebugger"
+    - "/Applications/Rider.app/Contents/bin:/riderLogsConf"
+    - "/Users/keyvan/Library/Logs/JetBrains/Rider2023.1/DebuggerWorker/JetBrains.Debugger.Worker.2023_5_26_14_16_28:/riderLogs:rw"
+    working_dir: "/app"
